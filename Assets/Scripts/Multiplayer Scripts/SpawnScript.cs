@@ -10,7 +10,6 @@ public class SpawnScript : NetworkBehaviour
 
     void Start()
     {
-        print("hi"); 
         NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
         NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnected;
     }
@@ -34,7 +33,7 @@ public class SpawnScript : NetworkBehaviour
 
     private IEnumerator WaitOneSecond(GameObject hostPlayer, Transform spawnPoint)
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         GameObject.Find("XR Origin Hands (XR Rig) MP Template Variant").transform.position = spawnPoint.position;
     }
 

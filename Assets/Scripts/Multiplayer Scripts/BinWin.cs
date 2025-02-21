@@ -5,7 +5,6 @@ using UnityEngine;
 public class BinWin : MonoBehaviour
 {
     public AudioSource winSound;
-    public AudioSource backgroundMusic;
     public Material BlackMaterial;
     private int winCount = 0;
     public OverallWinScript overallWin; 
@@ -24,7 +23,6 @@ public class BinWin : MonoBehaviour
                 this.gameObject.transform.GetChild(i).GetComponent<MeshRenderer>().material = BlackMaterial;
             }
             overallWin.NumbersWin();
-            backgroundMusic.Stop();
         }
     }
 }
